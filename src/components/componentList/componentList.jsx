@@ -7,6 +7,7 @@ import TypographyComponent from "../typographyComponent/typographyComponent";
 import TableComponent from "../tableComponent/tableComponent";
 import { getStyles } from "../../cssExports/exportStyles";
 import cssPresets from "../../cssPresets/cssPresets";
+import { sassColor } from "../../cssExports/exportStyles";
 
 
 import { MainNav, Button, Breadcrumb, AccordionBar, Card, Callout, Notification } from "../common";
@@ -54,9 +55,10 @@ class ComponentList extends Component {
 
     var variableStart = ":root \r\n { \r\n\t";
 
-    var themePrimaryColor = ""
+    var themePrimaryColor, themePrimaryColorDarken = ""
     if (cssPresets.themePresets.primaryColor !== this.props.themePrimaryColor) {
       themePrimaryColor = "--primary-color: " + this.props.themePrimaryColor + "; \r\n\t"
+      themePrimaryColorDarken = "--primary-color-darken:" + sassColor(this.props.themePrimaryColor, 2.5) + "; \r\n\t"
     }
 
     var themeSecondaryColor = ""
@@ -91,7 +93,7 @@ class ComponentList extends Component {
 
     var variableEnd = "\r\n } \r\n ";
 
-    var variables = variableStart + themePrimaryColor + themeSecondaryColor + infoColor + successColor + dangerColor + warningColor + tableHeadColor + variableEnd;
+    var variables = variableStart + themePrimaryColor + themePrimaryColorDarken +  themeSecondaryColor + infoColor + successColor + dangerColor + warningColor + tableHeadColor + variableEnd;
 
     var style = variables + getStyles();
     if (style.length > 0) {

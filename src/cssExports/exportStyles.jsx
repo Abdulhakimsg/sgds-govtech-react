@@ -2,7 +2,7 @@ var tinycolor = require("tinycolor2");
 
 export function getStyles() {
 
-    sassColor("dd2222", "2.5");
+    //sassColor("dd2222", "2.5");
 
     var primaryButtonStyle = ".sgds-button.is-primary \r\n { \r\n\t background-color: var(--primary-color); \r\n\t color: var(--white); \r\n } \r\n";
     var primaryButtonStyleHover = ".sgds-button.is-primary:hover \r\n { \r\n\t background-color: var(--primary-color-2.5%); \r\n\t color: var(--white); \r\n } \r\n";
@@ -17,8 +17,9 @@ export function getStyles() {
 
  export function sassColor(colorHexValue, percentage)
  {
-    var color = colorHexValue;
-    if(colorHexValue.length === 6 && percentage !== ""){
+    var color = colorHexValue.toString().substring(1);
+
+    if(color.length === 6 && percentage !== ""){
         
         var percent = percentage           
         var t = tinycolor(color);
@@ -32,31 +33,34 @@ export function getStyles() {
         console.log("S:" + colorS);
         console.log("L:" + colorL);
 
-        var lightHex, darkHex, satHex, desHex
+        //var lightHex, darkHex, satHex, desHex
+        var darkHex;
          
         for (var i = 0; i < 100; i = i + percent)
         {
           
-          var lighten = colorL + i;    
-          var lightColor = tinycolor("hsl(" + colorH + ", " + colorS + "%, " + lighten + "%)");
-          lightHex = lightColor.toHexString(); 
+        //   var lighten = colorL + i;    
+        //   var lightColor = tinycolor("hsl(" + colorH + ", " + colorS + "%, " + lighten + "%)");
+        //   lightHex = lightColor.toHexString(); 
           
           var darken = colorL - i;    
           var darkColor = tinycolor("hsl(" + colorH + ", " + colorS + "%, " + darken + "%)");
           darkHex = darkColor.toHexString(); 
           
-          var saturate = colorS + i;    
-          var satColor = tinycolor("hsl(" + colorH + ", " + saturate + "%, " + colorL + "%)");
-          satHex = satColor.toHexString(); 
+        //   var saturate = colorS + i;    
+        //   var satColor = tinycolor("hsl(" + colorH + ", " + saturate + "%, " + colorL + "%)");
+        //   satHex = satColor.toHexString(); 
           
-          var desaturate = colorS - i;    
-          var desColor = tinycolor("hsl(" + colorH + ", " + desaturate + "%, " + colorL + "%)");
-          desHex = desColor.toHexString();
+        //   var desaturate = colorS - i;    
+        //   var desColor = tinycolor("hsl(" + colorH + ", " + desaturate + "%, " + colorL + "%)");
+        //   desHex = desColor.toHexString();
+        
        }
 
-       console.log("Light:" + lightHex)
-       console.log("Dark:" + darkHex)
-       console.log("Saturate:" + satHex)
-       console.log("DeSaturate:" + desHex)
+        //   console.log("Light:" + lightHex)
+        //   console.log("Saturate:" + satHex)
+        //   console.log("DeSaturate:" + desHex)
+
+        return darkHex;
     }
 }
