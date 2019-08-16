@@ -2,15 +2,25 @@ var tinycolor = require("tinycolor2");
 
 export function getStyles() {
 
-    //sassColor("dd2222", "2.5");
-
-    var primaryButtonStyle = ".sgds-button.is-primary \r\n { \r\n\t background-color: var(--primary-color); \r\n\t color: var(--white); \r\n } \r\n";
-    var primaryButtonStyleHover = ".sgds-button.is-primary:hover \r\n { \r\n\t background-color: var(--primary-color-2.5%); \r\n\t color: var(--white); \r\n } \r\n";
+    //button
+    var primaryButtonStyle = ".sgds-button.is-primary \r\n { \r\n\t background-color: var(--primary-color); \r\n\t border-color: transparent; \r\n\t color: var(--white); \r\n\t opacity: 0.5; \r\n } \r\n";
+    var primaryButtonStyleHover = ".sgds-button.is-primary:hover \r\n { \r\n\t background-color: var(--primary-color-darken); \r\n\t color: var(--white); \r\n } \r\n";
 
     var outlinedButtonStyle = ".sgds-button.is-outlined \r\n { \r\n\tborder-color: var(--primary-color); \r\n\t color: var(--white); \r\n } \r\n";
-    var outlinedButtonStyleHover = ".sgds-button.is-outlined:hover \r\n { \r\n\t border-color: var(--primary-color-2.5%); \r\n\t color: var(--white); \r\n } \r\n\t ";
+    var outlinedButtonStyleHover = ".sgds-button.is-outlined:hover \r\n { \r\n\t border-color: var(--primary-color-darken); \r\n\t color: var(--white); \r\n } \r\n\t ";
 
-    var style = primaryButtonStyle + primaryButtonStyleHover + outlinedButtonStyle + outlinedButtonStyleHover;
+    var roundedButtonStyle = ".sgds-button.is-rounded \r\n { \r\n\tbackground-color: var(--primary-color); \r\n\t border-radius:29px;  \r\n } \r\n";
+    var roundedButtonStyleHover = ".sgds-button.is-rounded:hover \r\n { \r\n\t background-color: var(--primary-color-darken); \r\n\t border-color: transparent; \r\n\t color: var(--white); \r\n } \r\n\t ";
+
+    var disabledButtonStyle = ".sgds-button.is-rounded \r\n { \r\n\tbackground-color: var(--primary-color); \r\n\t border-radius:29px;  \r\n } \r\n";
+    var roundedButtonStyleHover = ".sgds-button.is-rounded:hover \r\n { \r\n\t background-color: var(--primary-color-darken); \r\n\t border-color: transparent; \r\n\t color: var(--white); \r\n } \r\n\t ";
+
+
+
+
+
+
+    var style = primaryButtonStyle + primaryButtonStyleHover + outlinedButtonStyle + outlinedButtonStyleHover + roundedButtonStyle + roundedButtonStyleHover;
     return style;
 }
 
@@ -28,12 +38,8 @@ export function getStyles() {
         var colorS = hsl["s"] * 100;
         var colorL = hsl["l"] * 100; 
         
-        console.log("T:" + t);
-        console.log("H:" + colorH);
-        console.log("S:" + colorS);
-        console.log("L:" + colorL);
-
         //var lightHex, darkHex, satHex, desHex
+
         var darkHex;
          
         for (var i = 0; i < 100; i = i + percent)
