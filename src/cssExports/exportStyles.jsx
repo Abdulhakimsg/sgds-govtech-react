@@ -91,33 +91,33 @@ export function getStyles() {
     var dangerHero = ".has-background-danger\r\n{\r\n\t background-color:var(--danger-color); \r\n}\r\n";
 
     //notification
-    var Notification = ".sgds-notification \r\n { \r\n\t background-color:var(--white-ter-color);\r\n}\r\n";
-    var PrimaryNotification = ".sgds-notification.is-primary \r\n { \r\n\t background-color:var(--primary-color);\r\n}\r\n";
-    var PrimarypNotification = ".sgds-notification.is-primary p \r\n { \r\n\t color:var(--grey-dark);\r\n}\r\n";
-    var SecondaryNotification = ".sgds-notification.is-secondary \r\n { \r\n\t background-color:var(--secondary-color);\r\n}\r\n";
-    var SecondarypNotification = ".sgds-notification.is-secondary p \r\n { \r\n\t color:var(--grey-dark);\r\n}\r\n";
-    var infoNotification = ".sgds-notification.is-info \r\n { \r\n\t background-color:var(--info-color);\r\n}\r\n";
-    var infopNotification = ".sgds-notification.is-info p \r\n { \r\n\t color:var(--white);\r\n}\r\n";
-    var successNotification = ".sgds-notification.is-success \r\n { \r\n\t background-color:var(--success-color);\r\n}\r\n";
-    var successpNotification = ".sgds-notification.is-success p \r\n{\r\n\t color:var(--white);\r\n}\r\n";
-    var warningNotification = ".sgds-notification.is-warning \r\n { \r\n\t background-color:var(--warning-color);\r\n}\r\n";
-    var warningpNotification = ".sgds-notification.is-warning p \r\n{\r\n\t color:var(--white);\r\n}\r\n";
-    var dangerNotification = ".sgds-notification.is-danger \r\n { \r\n\t background-color:var(--danger-color);\r\n}\r\n";
-    var dangerpNotification = ".sgds-notification.is-danger p \r\n { \r\n\t color:var(--white);\r\n}\r\n";
+    var Notification = ".sgds-notification  \r\n{\r\n\t background-color:var(--white-ter-color); \r\n}\r\n";
+    var PrimaryNotification = ".sgds-notification.is-primary \r\n{\r\n\t background-color:var(--primary-color); \r\n}\r\n";
+    var PrimarypNotification = ".sgds-notification.is-primary p \r\n{\r\n\t color:var(--grey-dark); \r\n}\r\n";
+    var SecondaryNotification = ".sgds-notification.is-secondary \r\n{\r\n\t background-color:var(--secondary-color); \r\n}\r\n";
+    var SecondarypNotification = ".sgds-notification.is-secondary p \r\n{\r\n\t color:var(--grey-dark); \r\n}\r\n";
+    var infoNotification = ".sgds-notification.is-info \r\n{\r\n\t background-color:var(--info-color); \r\n}\r\n";
+    var infopNotification = ".sgds-notification.is-info p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
+    var successNotification = ".sgds-notification.is-success \r\n{\r\n\t background-color:var(--success-color); \r\n}\r\n";
+    var successpNotification = ".sgds-notification.is-success p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
+    var warningNotification = ".sgds-notification.is-warning \r\n { \r\n\t background-color:var(--warning-color); \r\n}\r\n";
+    var warningpNotification = ".sgds-notification.is-warning p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
+    var dangerNotification = ".sgds-notification.is-danger \r\n{\r\n\t background-color:var(--danger-color); \r\n}\r\n";
+    var dangerpNotification = ".sgds-notification.is-danger p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
 
-    var Toastnotification = ".sgds-notification.is-toast \r\n { \r\n\t background-color:var(--white-ter-color);\r\n}\r\n";
-    var PrimaryToastNotification = ".sgds-notification.is-toast.is-primary \r\n { \r\n\t background-color:var(--primary-color);\r\n}\r\n";
-    var PrimarypToastNotification = ".sgds-notification.is-toast.is-primary p \r\n { \r\n\t color:var(--grey-dark);\r\n}\r\n";
-    var SecondaryToastNotification = ".sgds-notification.is-toast.is-secondary \r\n { \r\n\t background-color:var(--secondary-color);\r\n}\r\n";
-    var SecondarypToastNotification = ".sgds-notification.is-toast.is-secondary p \r\n { \r\n\t color:var(--grey-dark);\r\n}\r\n";
-    var infoToastNotification = ".sgds-notification.is-toast.is-info \r\n { \r\n\t background-color:var(--info-color);\r\n}\r\n";
-    var infopToastNotification = ".sgds-notification.is-toast.is-info p \r\n { \r\n\t color:var(--white);\r\n}\r\n";
-    var successToastNotification = ".sgds-notification.is-toast.is-success \r\n { \r\n\t background-color:var(--success-color);\r\n}\r\n";
-    var successpToastNotification = ".sgds-notification.is-toast.is-success p \r\n { \r\n\t color:var(--white);\r\n}\r\n";
-    var warningToastNotification = ".sgds-notification.is-toast.is-warning \r\n { \r\n\t background-color:var(--warning-color);\r\n}\r\n";
-    var warningpToastNotification = ".sgds-notification.is-toast.is-warning p \r\n { \r\n\t color:var(--white);\r\n}\r\n";
-    var dangerToastNotification = ".sgds-notification.is-toast.is-danger\r\n { \r\n\t background-color:var(--danger-color);\r\n}\r\n";
-    var dangerpToastNotification = ".sgds-notification.is-toast.is-danger p \r\n { \r\n\t color:var(--white);\r\n}\r\n";
+    var Toastnotification = ".sgds-notification.is-toast \r\n{\r\n\t background-color:var(--white-ter-color); \r\n}\r\n";
+    var PrimaryToastNotification = ".sgds-notification.is-toast.is-primary \r\n{\r\n\t background-color:var(--primary-color); \r\n}\r\n";
+    var PrimarypToastNotification = ".sgds-notification.is-toast.is-primary p \r\n{\r\n\t color:var(--grey-dark); \r\n}\r\n";
+    var SecondaryToastNotification = ".sgds-notification.is-toast.is-secondary \r\n{\r\n\t background-color:var(--secondary-color); \r\n}\r\n";
+    var SecondarypToastNotification = ".sgds-notification.is-toast.is-secondary p \r\n{\r\n\t color:var(--grey-dark); \r\n}\r\n";
+    var infoToastNotification = ".sgds-notification.is-toast.is-info \r\n{\r\n\t background-color:var(--info-color); \r\n}\r\n";
+    var infopToastNotification = ".sgds-notification.is-toast.is-info p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
+    var successToastNotification = ".sgds-notification.is-toast.is-success \r\n{\r\n\t background-color:var(--success-color); \r\n}\r\n";
+    var successpToastNotification = ".sgds-notification.is-toast.is-success p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
+    var warningToastNotification = ".sgds-notification.is-toast.is-warning \r\n{\r\n\t background-color:var(--warning-color); \r\n}\r\n";
+    var warningpToastNotification = ".sgds-notification.is-toast.is-warning p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
+    var dangerToastNotification = ".sgds-notification.is-toast.is-danger \r\n{\r\n\t background-color:var(--danger-color); \r\n}\r\n";
+    var dangerpToastNotification = ".sgds-notification.is-toast.is-danger p \r\n{\r\n\t color:var(--white); \r\n}\r\n";
 
     //tab
 

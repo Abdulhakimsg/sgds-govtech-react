@@ -98,8 +98,7 @@ class ComponentList extends Component {
       tableHeadColor = "table \r\n { \r\n\t background-color: " + this.props.tableHeadColor + "; \r\n } \r\n"
     }
     
-
-    var variableEnd = "\r\n } \r\n ";
+    var variableEnd = "}\r\n";
 
     var variables = variableStart + themePrimaryColor + themePrimaryColorDarken + themeSecondaryColor + infoColor + successColor + dangerColor + warningColor + 
     greylighter + greylight + grey + greydark + greydarker + white + tableHeadColor + variableEnd;
