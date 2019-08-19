@@ -56,10 +56,10 @@ class ComponentList extends Component {
     var variableStart = ":root \r\n { \r\n\t";
 
     var themePrimaryColor, themePrimaryColorDarken = ""
-    if (cssPresets.themePresets.primaryColor !== this.props.themePrimaryColor) {
-      themePrimaryColor = "--primary-color: " + this.props.themePrimaryColor + "; \r\n\t"
-      themePrimaryColorDarken = "--primary-color-darken:" + sassColor(this.props.themePrimaryColor, 2.5) + "; \r\n\t"
-    }
+
+    // if (cssPresets.themePresets.primaryColor !== this.props.themePrimaryColor) { }
+    themePrimaryColor = "--primary-color: " + this.props.themePrimaryColor + "; \r\n\t"
+    themePrimaryColorDarken = "--primary-color-darken:" + sassColor(this.props.themePrimaryColor, 2.5) + "; \r\n\t"
 
     var themeSecondaryColor = ""
     if (cssPresets.themePresets.secondaryColor !== this.props.themeSecondaryColor) {
@@ -86,14 +86,23 @@ class ComponentList extends Component {
       warningColor = "--warning-color: " + this.props.warningColor + "; \r\n"
     }
 
+    var greylighter= "--grey-lighter: #f0f0f0; \r\n\t";
+    var greylight = "--grey-light: #D6D6D6; \r\n\t";
+    var grey = "--grey: #767676; \r\n\t";
+    var greydark = "--grey-dark: #484848; \r\n\t";
+    var greydarker = "--grey-darker: #323232; \r\n\t";
+    var white = "--white: #ffffff; \r\n";
+
     var tableHeadColor = ""
     if (cssPresets.tablePresets.tableHeadColorDefault !== this.props.tableHeadColor) {
       tableHeadColor = "table \r\n { \r\n\t background-color: " + this.props.tableHeadColor + "; \r\n } \r\n"
     }
+    
 
     var variableEnd = "\r\n } \r\n ";
 
-    var variables = variableStart + themePrimaryColor + themePrimaryColorDarken +  themeSecondaryColor + infoColor + successColor + dangerColor + warningColor + tableHeadColor + variableEnd;
+    var variables = variableStart + themePrimaryColor + themePrimaryColorDarken + themeSecondaryColor + infoColor + successColor + dangerColor + warningColor + 
+    greylighter + greylight + grey + greydark + greydarker + white + tableHeadColor + variableEnd;
 
     var style = variables + getStyles();
     if (style.length > 0) {
